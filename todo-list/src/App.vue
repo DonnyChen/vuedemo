@@ -3,7 +3,7 @@
     <div class="todo-container">
       <div class="todo-wrap">
         <TodoHeader :addTodo="addTodo" />
-        <ItemList :todos="todos" :checkTodo="checkTodo" />
+        <ItemList :todos="todos"  />
         <TodoFooter />
       </div>
     </div>
@@ -34,11 +34,6 @@ export default {
     addTodo(x) {
       console.log("APP收到", x);
       this.todos.unshift(x);
-    },
-    checkTodo(id) {
-      this.todos.forEach((todo) => {
-        if (todo.id == id) todo.done = !todo.done;
-      });
     }
   }
 };

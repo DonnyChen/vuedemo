@@ -1,11 +1,7 @@
 <template>
   <li>
     <label>
-      <input
-        type="checkbox"
-        :checked="todo.done"
-        @change="handleCheck(todo.id)"
-      />
+      <input type="checkbox" v-model="todo.done" />
       <span>{{ todo.title }}</span>
     </label>
     <button class="btn btn-danger" style="display: none">删除</button>
@@ -21,7 +17,7 @@ export default {
     };
   },
   // 声明接受
-  props: ["todo", "checkTodo"],
+  props: ["todo"],
   methods: {
     handleCheck(id) {
       this.checkTodo(id);
