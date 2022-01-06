@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> 数据代理</title>
+        <script type="text/javascript" src="../js/vue.js" > </script>
+    </head>
+    <body>
+        <div id="root">
+            <h2>Wellcome {{name}}</h2>
+            <!-- v-on  vs @ -->
+            <input type="text" placeholder="按下回车提示输入"  value="FrstName" >
+            <input type="text" placeholder="按下回车提示输入"  >
+            <input type="text" placeholder="按下回车提示输入"  >
+        </div>  
+        <script type="text/javascript">
+            Vue.config.productionTip  = false 
+
+
+            const vm = new Vue({
+                el:"#root",
+                data:{
+                    name:'donny'
+                },
+
+                methods:{
+                    showinfo(e){
+                        console.log(e.keyCode)
+                        console.log(e.target.value)
+                        
+                    }
+                }
+            })
+
+            
+
+        </script>
+    </body>
+</html>

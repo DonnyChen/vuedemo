@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> 数据代理</title>
+        <script type="text/javascript" src="../js/vue.js" > </script>
+    </head>
+    <body>
+        <div id="root">
+            <h2>Wellcome {{name}}</h2>
+            <!-- v-on  vs @ -->
+            <a href="http://www.baidu.com" @click.prevent = "showinfo">Click me</a>
+        </div>  
+        <script type="text/javascript">
+            Vue.config.productionTip  = false 
+
+
+            const vm = new Vue({
+                el:"#root",
+                data:{
+                    name:'donny'
+                },
+
+                methods:{
+                    showinfo(e){
+
+                       
+                        alert("hello donny1")
+                    }
+                }
+            })
+
+            
+
+        </script>
+    </body>
+</html>

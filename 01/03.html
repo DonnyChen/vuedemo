@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> 数据代理</title>
+        <script type="text/javascript" src="../js/vue.js" > </script>
+    </head>
+    <body>
+        <div id="root">
+           <h1>学校名称：{{name}}</h1>
+           <h1>学校地址：{{address}}</h1>
+        </div>
+        <script type="text/javascript">
+            Vue.config.productionTip  = false 
+           /* let obj1 = {x:100}
+            let obj2 = {y:100}
+            Object.defineProperty(obj2, x,{
+                get(){
+                    return obj1.x
+                },
+                set(value){
+                    obj1.x = value
+                }
+            })*/
+
+            const vm = new Vue({
+                el:"#root",
+                // data的第一种写法：对象式
+                /*data:{
+                    name:"Donny222"
+                }*/
+
+                // data的第二种写法：
+                data(){
+                    
+                    return {
+                        name:"Donny2222",
+                        address:"Shangahi"
+                    }
+                }
+            })
+
+            console.log(vm)
+
+            
+
+        </script>
+    </body>
+</html>

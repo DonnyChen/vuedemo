@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> 数据代理</title>
+        <script type="text/javascript" src="../js/vue.js" > </script>
+    </head>
+    <body>
+        <div id="root">
+            <h2>Wellcome {{name}}</h2>
+            <!-- v-on  vs @ -->
+            FirstName: <input type="text" placeholder="FirstName" v-model="firstName" >
+            <br />
+            LastName <input type="text" placeholder="LastName" v-model="lastName" >  <br />
+            FullName <span> {{fullName()}}</span>
+        </div>  
+        <script type="text/javascript">
+            Vue.config.productionTip  = false 
+
+
+            const vm = new Vue({
+                el:"#root",
+                data:{
+                    name:'donny',
+                    firstName:"Donny",
+                    lastName: "Chen"
+                },
+                methods: {
+                    fullName(){
+                        return this.firstName +'-'+ this.lastName
+                    }
+                }
+
+            
+            })
+
+            
+
+        </script>
+    </body>
+</html>

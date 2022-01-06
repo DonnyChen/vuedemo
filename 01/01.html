@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> 01 demo</title>
+        <script type="text/javascript" src="../js/vue.js" > </script>
+    </head>
+    <body>
+        <div id="root">
+            <h1>Hello {{name}}</h1>
+            <a :href="url">Baiduo</a>
+        </div>
+        <script type="text/javascript">
+            Vue.config.productionTip  = false
+            /*// el的两种写法
+            const v = new Vue({
+                //el:"#root", // 第一种写法
+                data:{
+                    name:'Donny222',
+                    'url':'www.baidu.com'
+                }
+            })
+            console.log(v)
+
+            v.$mount("#root") // 第二种写法 */
+
+
+            // data 的两种写法
+            new Vue({
+                el:"#root",
+                // data的第一种写法：对象式
+                /*data:{
+                    name:"Donny222"
+                }*/
+
+                // data的第二种写法：
+                data(){
+                    console.log('@@@@', this)
+                    return {
+                        name:"Donny2222",
+                        url:"www.baidu.com"
+                    }
+                }
+            })
+
+            
+
+        </script>
+    </body>
+</html>
